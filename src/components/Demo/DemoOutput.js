@@ -1,7 +1,9 @@
-const DemoOutput = (props) => {
-  console.log("In demo");
+import React from 'react';
 
-  return <p>{props.show ? "This is new!" : ""}</p>;
+const DemoOutput = (props) => {
+  console.log('DEMO RUNNING');
+
+  return <p>{props.show ? 'This is new!' : ''}</p>;
 };
 
-export default DemoOutput;
+export default React.memo(DemoOutput);
