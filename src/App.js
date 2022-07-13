@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import Button from "./components/UI/Button/Button";
+import React, { useState, useCallback } from 'react';
+import Button from './components/UI/Button/Button';
 
-import "./App.css";
-import DemoOutput from "./components/Demo/DemoOutput";
+import './App.css';
+import DemoOutput from './components/Demo/DemoOutput';
 
 function App() {
   const [showParagraph, setShowParagraph] = useState(false);
 
-  console.log("APP RUNNING");
+  console.log('APP RUNNING');
 
-  const toggleParagraphHandler = (event) => {
+  const toggleParagraphHandler = useCallback((event) => {
     setShowParagraph((prevState) => !prevState);
-  };
+  }, []);
 
   return (
     <div className="app">
